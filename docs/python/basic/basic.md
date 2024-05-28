@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: minimal
 title: Basic
 parent: Python
 nav_order: 1
