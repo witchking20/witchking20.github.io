@@ -670,7 +670,7 @@ plt.show()
 
 
     
-![png](mpg_%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_files/mpg_%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_19_0.png)
+<img src ='assets/images/1week/mpg_선형회귀_결정트리_files/mpg_선형회귀_결정트리_19_0.png'>
     
 
 
@@ -717,8 +717,7 @@ plt.show()
 
 
     
-![png](mpg_%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_files/mpg_%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_22_0.png)
-    
+<img src ='assets/images/1week/mpg_선형회귀_결정트리_files/mpg_선형회귀_결정트리_22_0.png'>    
 
 
 
@@ -764,7 +763,7 @@ plt.show()
 
 
     
-![png](mpg_%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_files/mpg_%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_25_0.png)
+<img src ='assets/images/1week/mpg_선형회귀_결정트리_files/mpg_선형회귀_결정트리_25_0.png'>    
     
 
 
@@ -796,9 +795,7 @@ plt.ylabel('score')
 plt.show()
 ```
 
-
-    
-![png](mpg_%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_files/mpg_%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_27_0.png)
+<img src = 'assets/images/1week/mpg_선형회귀_결정트리_files/mpg_선형회귀_결정트리_27_0.png'>
     
 
 
