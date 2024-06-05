@@ -1,3 +1,11 @@
+---
+layout: default
+title: 1.titanic_결정트리
+parent: AI 개인학습
+grand_parent: AI
+nav_order: 1
+---
+
 # titanic 데이터 분류 맛보기
 
 ## 타이타닉 데이터를 분석한후 생존자 예측분류 해보자!
