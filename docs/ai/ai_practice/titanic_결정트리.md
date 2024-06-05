@@ -1331,7 +1331,7 @@ plt.show()
 
 
     
-![png](titanic_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_files/titanic_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_23_0.png)
+<img src="/assets/images/1week/titanic_결정트리_files/titanic_결정트리_23_0.png" > 
     
 
 
@@ -1376,7 +1376,7 @@ plt.show()
 
 
     
-![png](titanic_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_files/titanic_%EA%B2%B0%EC%A0%95%ED%8A%B8%EB%A6%AC_26_0.png)
+<img src="/assets/images/1week/titanic_결정트리_files/titanic_결정트리_26_0.png" > 
     
 
 
