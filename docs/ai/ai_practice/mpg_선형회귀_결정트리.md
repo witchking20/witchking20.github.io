@@ -1,3 +1,11 @@
+---
+layout: default
+title: 2.mpg_선형회귀_결정트리
+parent: AI 개인학습
+grand_parent: AI
+nav_order: 2
+---
+
 # MPG 데이터 머신러닝 맛보기
 
 ## mpg데이터를 분석한후 연비예측해보자!
