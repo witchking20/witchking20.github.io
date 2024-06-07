@@ -1,0 +1,595 @@
+```python
+# Seaborn 패키지 불러오기
+import seaborn as sns
+```
+
+
+```python
+# Seaborn 데이터셋 목록
+sns.get_dataset_names()
+```
+
+
+
+
+    ['anagrams',
+     'anscombe',
+     'attention',
+     'brain_networks',
+     'car_crashes',
+     'diamonds',
+     'dots',
+     'dowjones',
+     'exercise',
+     'flights',
+     'fmri',
+     'geyser',
+     'glue',
+     'healthexp',
+     'iris',
+     'mpg',
+     'penguins',
+     'planets',
+     'seaice',
+     'taxis',
+     'tips',
+     'titanic']
+
+
+
+
+```python
+# 다이아몬드 데이터 불러오기
+diamonds = sns.load_dataset('diamonds')
+```
+
+
+```python
+# 다이아몬드 데이터 확인
+diamonds
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>color</th>
+      <th>clarity</th>
+      <th>depth</th>
+      <th>table</th>
+      <th>price</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.23</td>
+      <td>Ideal</td>
+      <td>E</td>
+      <td>SI2</td>
+      <td>61.5</td>
+      <td>55.0</td>
+      <td>326</td>
+      <td>3.95</td>
+      <td>3.98</td>
+      <td>2.43</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.21</td>
+      <td>Premium</td>
+      <td>E</td>
+      <td>SI1</td>
+      <td>59.8</td>
+      <td>61.0</td>
+      <td>326</td>
+      <td>3.89</td>
+      <td>3.84</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.23</td>
+      <td>Good</td>
+      <td>E</td>
+      <td>VS1</td>
+      <td>56.9</td>
+      <td>65.0</td>
+      <td>327</td>
+      <td>4.05</td>
+      <td>4.07</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.29</td>
+      <td>Premium</td>
+      <td>I</td>
+      <td>VS2</td>
+      <td>62.4</td>
+      <td>58.0</td>
+      <td>334</td>
+      <td>4.20</td>
+      <td>4.23</td>
+      <td>2.63</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.31</td>
+      <td>Good</td>
+      <td>J</td>
+      <td>SI2</td>
+      <td>63.3</td>
+      <td>58.0</td>
+      <td>335</td>
+      <td>4.34</td>
+      <td>4.35</td>
+      <td>2.75</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>53935</th>
+      <td>0.72</td>
+      <td>Ideal</td>
+      <td>D</td>
+      <td>SI1</td>
+      <td>60.8</td>
+      <td>57.0</td>
+      <td>2757</td>
+      <td>5.75</td>
+      <td>5.76</td>
+      <td>3.50</td>
+    </tr>
+    <tr>
+      <th>53936</th>
+      <td>0.72</td>
+      <td>Good</td>
+      <td>D</td>
+      <td>SI1</td>
+      <td>63.1</td>
+      <td>55.0</td>
+      <td>2757</td>
+      <td>5.69</td>
+      <td>5.75</td>
+      <td>3.61</td>
+    </tr>
+    <tr>
+      <th>53937</th>
+      <td>0.70</td>
+      <td>Very Good</td>
+      <td>D</td>
+      <td>SI1</td>
+      <td>62.8</td>
+      <td>60.0</td>
+      <td>2757</td>
+      <td>5.66</td>
+      <td>5.68</td>
+      <td>3.56</td>
+    </tr>
+    <tr>
+      <th>53938</th>
+      <td>0.86</td>
+      <td>Premium</td>
+      <td>H</td>
+      <td>SI2</td>
+      <td>61.0</td>
+      <td>58.0</td>
+      <td>2757</td>
+      <td>6.15</td>
+      <td>6.12</td>
+      <td>3.74</td>
+    </tr>
+    <tr>
+      <th>53939</th>
+      <td>0.75</td>
+      <td>Ideal</td>
+      <td>D</td>
+      <td>SI2</td>
+      <td>62.2</td>
+      <td>55.0</td>
+      <td>2757</td>
+      <td>5.83</td>
+      <td>5.87</td>
+      <td>3.64</td>
+    </tr>
+  </tbody>
+</table>
+<p>53940 rows × 10 columns</p>
+</div>
+
+
+
+- carat: 다이아몬드의 무게를 나타내며, 일반적으로 다이아몬드의 크기와 연관이 있습니다. 1 캐럿은 0.2 그램입니다.
+
+- cut: 다이아몬드의 컷 등급을 나타내며, 다이아몬드가 얼마나 잘 연마되었는지를 평가합니다. 일반적으로 다음과 같은 등급이 있습니다:
+
+1. Fair (공정)
+2. Good (좋음)
+3. Very Good (매우 좋음)
+4. Premium (프리미엄)
+5. Ideal (이상적)
+- color: 다이아몬드의 색상을 나타내며, D (무색)에서 J (옅은 색)까지 등급이 매겨집니다. D 등급이 가장 무색에 가까운 다이아몬드입니다.
+
+- clarity: 다이아몬드의 투명도를 나타내며, 내포물 및 결함의 수와 크기에 따라 등급이 매겨집니다. 일반적인 등급은 다음과 같습니다:
+
+1. I1, I2, I3 (포함)
+2. SI1, SI2 (약간 포함)
+3. VS1, VS2 (매우 약간 포함)
+4. VVS1, VVS2 (매우 매우 약간 포함)
+5. IF (내포물이 없음)
+6. FL (무결점)
+- depth: 다이아몬드의 깊이를 나타내며, 다이아몬드의 높이(깊이)를 평균 지름으로 나눈 후 백분율로 나타냅니다. 깊이는 다이아몬드의 광채와 관련이 있습니다.
+
+- table: 다이아몬드의 테이블 너비를 나타내며, 다이아몬드의 상단 평평한 면의 너비를 다이아몬드의 평균 지름으로 나눈 후 백분율로 나타냅니다.
+
+- price: 다이아몬드의 가격을 나타내며, 미국 달러로 측정됩니다.
+
+- x: 다이아몬드의 길이를 나타내며, 밀리미터로 측정됩니다.
+
+- y: 다이아몬드의 너비를 나타내며, 밀리미터로 측정됩니다.
+
+- z: 다이아몬드의 높이를 나타내며, 밀리미터로 측정됩니다.
+
+
+```python
+# 널값 존재 + 데이터 자료형 확인
+diamonds.info()
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 53940 entries, 0 to 53939
+    Data columns (total 10 columns):
+     #   Column   Non-Null Count  Dtype   
+    ---  ------   --------------  -----   
+     0   carat    53940 non-null  float64 
+     1   cut      53940 non-null  category
+     2   color    53940 non-null  category
+     3   clarity  53940 non-null  category
+     4   depth    53940 non-null  float64 
+     5   table    53940 non-null  float64 
+     6   price    53940 non-null  int64   
+     7   x        53940 non-null  float64 
+     8   y        53940 non-null  float64 
+     9   z        53940 non-null  float64 
+    dtypes: category(3), float64(6), int64(1)
+    memory usage: 3.0 MB
+    
+
+1.   데이터 전처리 (null값 수정, 자료형 수정) dropna or 널값 다른값으로 대체, 자료형 int or float으로변환
+- from sklearn.preprocessing import LabelEncoder
+2.   스케일링 StandardScaler
+3.   데이터 나누기 train_test_split
+4.   사용할 모델 확인(logistic knn LinearRegression DecisionTree)
+5.   그리드서치(GridSearchCV)
+6.   모델별,하이퍼 파라미터별 점수확인
+
+
+```python
+from sklearn.preprocessing import LabelEncoder
+
+label_encoder = LabelEncoder()
+label_encoder_list = []
+
+diamonds['cut'] = label_encoder.fit_transform(diamonds['cut'])
+label_encoder_list.append(label_encoder.classes_)
+diamonds['color'] = label_encoder.fit_transform(diamonds['color'])
+label_encoder_list.append(label_encoder.classes_)
+diamonds['clarity'] = label_encoder.fit_transform(diamonds['clarity'])
+label_encoder_list.append(label_encoder.classes_)
+label_encoder_list
+```
+
+
+
+
+    [array(['Fair', 'Good', 'Ideal', 'Premium', 'Very Good'], dtype=object),
+     array(['D', 'E', 'F', 'G', 'H', 'I', 'J'], dtype=object),
+     array(['I1', 'IF', 'SI1', 'SI2', 'VS1', 'VS2', 'VVS1', 'VVS2'],
+           dtype=object)]
+
+
+
+
+```python
+print(diamonds)
+```
+
+           carat  cut  color  clarity  depth  table  price     x     y     z
+    0       0.23    2      1        3   61.5   55.0    326  3.95  3.98  2.43
+    1       0.21    3      1        2   59.8   61.0    326  3.89  3.84  2.31
+    2       0.23    1      1        4   56.9   65.0    327  4.05  4.07  2.31
+    3       0.29    3      5        5   62.4   58.0    334  4.20  4.23  2.63
+    4       0.31    1      6        3   63.3   58.0    335  4.34  4.35  2.75
+    ...      ...  ...    ...      ...    ...    ...    ...   ...   ...   ...
+    53935   0.72    2      0        2   60.8   57.0   2757  5.75  5.76  3.50
+    53936   0.72    1      0        2   63.1   55.0   2757  5.69  5.75  3.61
+    53937   0.70    4      0        2   62.8   60.0   2757  5.66  5.68  3.56
+    53938   0.86    3      4        3   61.0   58.0   2757  6.15  6.12  3.74
+    53939   0.75    2      0        3   62.2   55.0   2757  5.83  5.87  3.64
+    
+    [53940 rows x 10 columns]
+    
+
+
+```python
+X = diamonds.drop('price',axis=1)
+y = diamonds['price']
+```
+
+
+```python
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X,y,random_state=42)
+```
+
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+```
+
+# randomforest + 그리드서치 하려고했는데 흠.. 메모리컷..
+
+
+```python
+# from sklearn.ensemble import RandomForestClassifier
+# from sklearn.model_selection import GridSearchCV
+
+# model = RandomForestClassifier(random_state=42)
+# params = {'max_depth' : [x for x in range(1,30)],
+#           'min_samples_split' : [z for z in range(2,11)],
+#           'max_features' : ['int', 'float','auto','sqrt','log2']}
+
+# gs = GridSearchCV(model, param_grid = params)
+# gs.fit(X_train_scaled, y_train)
+```
+
+
+```python
+# rf = gs.best_estimator_
+# print(rf.score(X_train_scaled, y_train))
+# print(rf.score(X_test_scaled,y_test))
+```
+
+
+```python
+# gs.best_params_
+```
+
+
+```python
+# !pip install lightgbm
+```
+
+
+```python
+# from lightgbm import LGBMClassifier
+
+
+# model = LGBMClassifier(n_jobs=-1,random_state=42,n_estimators=1,max_depth=3)
+# model.fit(X_train_scaled,y_train)
+# print(model.score(X_train_scaled, y_train))
+# print(model.score(X_test_scaled,y_test))
+```
+
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+
+model = RandomForestClassifier(n_jobs=-1,random_state=42,n_estimators=10)
+model.fit(X_train_scaled,y_train)
+print(model.score(X_train_scaled, y_train))
+print(model.score(X_test_scaled,y_test))
+```
+
+
+    ---------------------------------------------------------------------------
+
+    MemoryError                               Traceback (most recent call last)
+
+    Input In [17], in <cell line: 5>()
+          1 from sklearn.ensemble import RandomForestClassifier
+          4 model = RandomForestClassifier(n_jobs=-1,random_state=42,n_estimators=10)
+    ----> 5 model.fit(X_train_scaled,y_train)
+          6 print(model.score(X_train_scaled, y_train))
+          7 print(model.score(X_test_scaled,y_test))
+    
+
+    File ~\anaconda3\lib\site-packages\sklearn\ensemble\_forest.py:450, in BaseForest.fit(self, X, y, sample_weight)
+        439 trees = [
+        440     self._make_estimator(append=False, random_state=random_state)
+        441     for i in range(n_more_estimators)
+        442 ]
+        444 # Parallel loop: we prefer the threading backend as the Cython code
+        445 # for fitting the trees is internally releasing the Python GIL
+        446 # making threading more efficient than multiprocessing in
+        447 # that case. However, for joblib 0.12+ we respect any
+        448 # parallel_backend contexts set at a higher level,
+        449 # since correctness does not rely on using threads.
+    --> 450 trees = Parallel(
+        451     n_jobs=self.n_jobs,
+        452     verbose=self.verbose,
+        453     **_joblib_parallel_args(prefer="threads"),
+        454 )(
+        455     delayed(_parallel_build_trees)(
+        456         t,
+        457         self,
+        458         X,
+        459         y,
+        460         sample_weight,
+        461         i,
+        462         len(trees),
+        463         verbose=self.verbose,
+        464         class_weight=self.class_weight,
+        465         n_samples_bootstrap=n_samples_bootstrap,
+        466     )
+        467     for i, t in enumerate(trees)
+        468 )
+        470 # Collect newly grown trees
+        471 self.estimators_.extend(trees)
+    
+
+    File ~\anaconda3\lib\site-packages\joblib\parallel.py:1056, in Parallel.__call__(self, iterable)
+       1053     self._iterating = False
+       1055 with self._backend.retrieval_context():
+    -> 1056     self.retrieve()
+       1057 # Make sure that we get a last message telling us we are done
+       1058 elapsed_time = time.time() - self._start_time
+    
+
+    File ~\anaconda3\lib\site-packages\joblib\parallel.py:935, in Parallel.retrieve(self)
+        933 try:
+        934     if getattr(self._backend, 'supports_timeout', False):
+    --> 935         self._output.extend(job.get(timeout=self.timeout))
+        936     else:
+        937         self._output.extend(job.get())
+    
+
+    File ~\anaconda3\lib\multiprocessing\pool.py:771, in ApplyResult.get(self, timeout)
+        769     return self._value
+        770 else:
+    --> 771     raise self._value
+    
+
+    File ~\anaconda3\lib\multiprocessing\pool.py:125, in worker(inqueue, outqueue, initializer, initargs, maxtasks, wrap_exception)
+        123 job, i, func, args, kwds = task
+        124 try:
+    --> 125     result = (True, func(*args, **kwds))
+        126 except Exception as e:
+        127     if wrap_exception and func is not _helper_reraises_exception:
+    
+
+    File ~\anaconda3\lib\site-packages\joblib\_parallel_backends.py:595, in SafeFunction.__call__(self, *args, **kwargs)
+        593 def __call__(self, *args, **kwargs):
+        594     try:
+    --> 595         return self.func(*args, **kwargs)
+        596     except KeyboardInterrupt as e:
+        597         # We capture the KeyboardInterrupt and reraise it as
+        598         # something different, as multiprocessing does not
+        599         # interrupt processing for a KeyboardInterrupt
+        600         raise WorkerInterrupt() from e
+    
+
+    File ~\anaconda3\lib\site-packages\joblib\parallel.py:262, in BatchedCalls.__call__(self)
+        258 def __call__(self):
+        259     # Set the default nested backend to self._backend but do not set the
+        260     # change the default number of processes to -1
+        261     with parallel_backend(self._backend, n_jobs=self._n_jobs):
+    --> 262         return [func(*args, **kwargs)
+        263                 for func, args, kwargs in self.items]
+    
+
+    File ~\anaconda3\lib\site-packages\joblib\parallel.py:262, in <listcomp>(.0)
+        258 def __call__(self):
+        259     # Set the default nested backend to self._backend but do not set the
+        260     # change the default number of processes to -1
+        261     with parallel_backend(self._backend, n_jobs=self._n_jobs):
+    --> 262         return [func(*args, **kwargs)
+        263                 for func, args, kwargs in self.items]
+    
+
+    File ~\anaconda3\lib\site-packages\sklearn\utils\fixes.py:216, in _FuncWrapper.__call__(self, *args, **kwargs)
+        214 def __call__(self, *args, **kwargs):
+        215     with config_context(**self.config):
+    --> 216         return self.function(*args, **kwargs)
+    
+
+    File ~\anaconda3\lib\site-packages\sklearn\ensemble\_forest.py:185, in _parallel_build_trees(tree, forest, X, y, sample_weight, tree_idx, n_trees, verbose, class_weight, n_samples_bootstrap)
+        182     elif class_weight == "balanced_subsample":
+        183         curr_sample_weight *= compute_sample_weight("balanced", y, indices=indices)
+    --> 185     tree.fit(X, y, sample_weight=curr_sample_weight, check_input=False)
+        186 else:
+        187     tree.fit(X, y, sample_weight=sample_weight, check_input=False)
+    
+
+    File ~\anaconda3\lib\site-packages\sklearn\tree\_classes.py:937, in DecisionTreeClassifier.fit(self, X, y, sample_weight, check_input, X_idx_sorted)
+        899 def fit(
+        900     self, X, y, sample_weight=None, check_input=True, X_idx_sorted="deprecated"
+        901 ):
+        902     """Build a decision tree classifier from the training set (X, y).
+        903 
+        904     Parameters
+       (...)
+        934         Fitted estimator.
+        935     """
+    --> 937     super().fit(
+        938         X,
+        939         y,
+        940         sample_weight=sample_weight,
+        941         check_input=check_input,
+        942         X_idx_sorted=X_idx_sorted,
+        943     )
+        944     return self
+    
+
+    File ~\anaconda3\lib\site-packages\sklearn\tree\_classes.py:420, in BaseDecisionTree.fit(self, X, y, sample_weight, check_input, X_idx_sorted)
+        409 else:
+        410     builder = BestFirstTreeBuilder(
+        411         splitter,
+        412         min_samples_split,
+       (...)
+        417         self.min_impurity_decrease,
+        418     )
+    --> 420 builder.build(self.tree_, X, y, sample_weight)
+        422 if self.n_outputs_ == 1 and is_classifier(self):
+        423     self.n_classes_ = self.n_classes_[0]
+    
+
+    File sklearn\tree\_tree.pyx:131, in sklearn.tree._tree.DepthFirstTreeBuilder.build()
+    
+
+    File sklearn\tree\_tree.pyx:227, in sklearn.tree._tree.DepthFirstTreeBuilder.build()
+    
+
+    File sklearn\tree\_tree.pyx:724, in sklearn.tree._tree.Tree._add_node()
+    
+
+    File sklearn\tree\_tree.pyx:696, in sklearn.tree._tree.Tree._resize_c()
+    
+
+    File sklearn\tree\_utils.pyx:37, in sklearn.tree._utils.safe_realloc()
+    
+
+    MemoryError: could not allocate 5478285312 bytes
+
+
+- randomforest 특성상 데이터 개수가 많으면 메모리를 많이먹는데 다이아몬드 데이터가 약 5만개가 넘는데 이것도 힘드네..
